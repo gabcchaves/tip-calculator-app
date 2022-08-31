@@ -82,11 +82,16 @@ body {
 }
 
 .bill-info > input:not(input[type=radio]) {
-	padding: 1.8% 3%;
+	padding: 1.8% 8%;
+	text-align: right;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	background-origin: padding-box;
 }
 
 #num-people-input {
 	justify-self: flex-end;
+	background-image: url("images/icon-person.svg");
 }
 
 .tip-percs {
@@ -130,7 +135,10 @@ body {
 	-moz-appearance: textfield;
 }
 
-#bill-input { margin-bottom: 10%; }
+#bill-input {
+	margin-bottom: 10%;
+	background-image: url("images/icon-dollar.svg");
+}
 
 .tip-info {
 	background-color: var(--very-dark-cyan);
@@ -196,4 +204,42 @@ body {
 #reset-btn:hover {
 	background-color: var(--light-grayish-cyan);
 	cursor: pointer;
+}
+
+/* Mobile settings */
+@media screen and (max-width: 1080px) {
+	body {
+		height: auto;
+		min-height: 100vh;
+		padding-top: 40%;
+		background-size: 20%;
+		background-position: center 10%;
+	}
+
+	#tip-card {
+		flex-direction: column;
+		width: 100%;
+		padding: 8%;
+	}
+
+	.bill-info {
+		width: 100%;
+	}
+
+	.tip-percs {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		gap: 2vh;
+	}
+
+	.tip-info {
+		margin: 10% 0;
+	}
+
+	#tip-amount-result { margin-bottom: 10%; }
+	#total-tip-result { margin-bottom: 10%; }
+
+	.result-area {
+		padding-bottom: 5%;
+	}
 }
