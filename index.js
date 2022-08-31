@@ -38,12 +38,20 @@ function loadEvents() {
 
 	for (let i = 0; i < percRadios.length; i++) {
 		// Set current percentage
-		if (percRadios[i].checked) currPerc = percRadios[i].value;
+		if (percRadios[i].checked) {
+			currPerc = percRadios[i].value;
+			percRadios[i].parentNode.style.backgroundColor = "var(--strong-cyan)";
+		}
 
 		percRadios[i].addEventListener("change", () => {
+			for (let i = 0; i < percRadios.length; i++) {
+				percRadios[i].parentNode.style.backgroundColor = "var(--very-dark-cyan)";
+			}
+
 			if (percRadios[i].checked) {
 				currPerc = parseFloat(percRadios[i].value);
 				percCustom.value = "";
+				percRadios[i].parentNode.style.backgroundColor = "var(--strong-cyan)";
 			}
 
 			refreshResults(
@@ -95,6 +103,7 @@ function loadEvents() {
 	percCustom.addEventListener("focus", () => {
 		for (let i = 0; i < percRadios.length; i++) {
 			percRadios[i].checked = false;
+			percRadios[i].parentNode.style.backgroundColor = "var(--very-dark-cyan)";
 		}
 	});
 }
