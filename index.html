@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Frontend Mentor | Tip calculator app</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<link rel="stylesheet" href="style.css">
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<article id="tip-card">
+			<section class="bill-info">
+				<label for="bill-input">Bill</label>
+				<input id="bill-input" placeholder="0">
+				<label>Select Tip %</label>
+				<div class="tip-percs">
+					<label><input id="perc-5" type="radio">5%</label>
+					<label><input id="perc-10" type="radio">10%</label>
+					<label><input id="perc-15" type="radio">15%</label>
+					<label><input id="perc-25" type="radio">25%</label>
+					<label><input id="perc-50" type="radio">50%</label>
+					<input id="perc-custom" type="number" placeholder="Custom">
+				</div>
+				<label>Number of People</label>
+				<input id="num-people-input" type="number" placeholder="0">
+			</section>
+
+			<section class="tip-info">
+				<div class="result-area">
+					<p class="highlight">Tip Amount</p>
+					<p>/person</p>
+					<strong id="tip-amount-result">$0.00</strong>
+					<p class="highlight">Total</p>
+					<p>/person</p>
+					<strong id="total-tip-result">$0.00</strong>
+				</div>
+				<button id="reset-btn">RESET</button>
+			</section>
+		</article>
+	</body>
+</html>
