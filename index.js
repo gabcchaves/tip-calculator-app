@@ -62,7 +62,7 @@ function loadEvents() {
 	});
 
 	numPeopleInput.addEventListener("input", () => {
-		if (numPeopleInput.value == 0) {
+		if (numPeopleInput.value === "0") {
 			document.querySelector(".error-msg").innerHTML = "Can't be zero";
 		} else {
 			document.querySelector(".error-msg").innerHTML = "";
