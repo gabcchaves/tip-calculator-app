@@ -8,7 +8,7 @@ html, body {
 
 * {
 	font-family: 'Space Mono', monospace;
-	font-size: 24px;
+	font-size: 16px;
 	box-sizing: border-box;
 }
 
@@ -29,20 +29,23 @@ html, body {
 body {
 	min-width: 100vw;
 	min-height: 100vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url("images/icon-logo.svg");
+	background-image: url("images/logo.svg");
+	background-repeat: no-repeat;
+	background-position: center 5%;
+	background-size: 8%;
 	background-color: var(--light-grayish-cyan);
 }
 
 #tip-card {
 	background-color: var(--white);
 	border-radius: 20px;
-	width: 70%;
-	width: 70%;
-	height: 30%;
+	width: 60%;
+	height: 60%;
 	display: flex;
 	padding: 2.5%;
 	box-shadow: 0 10px 60px -20px var(--dark-grayish-cyan);
