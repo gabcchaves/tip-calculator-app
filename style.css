@@ -247,4 +247,6 @@ body {
 	.result-area {
 		padding-bottom: 5%;
 	}
+
+	.error-msg { font-size: 0.8rem; }
 }
