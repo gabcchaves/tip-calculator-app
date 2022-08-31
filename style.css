@@ -206,6 +206,11 @@ body {
 	cursor: pointer;
 }
 
+.error-msg {
+	color: red;
+	float: right;
+}
+
 /* Mobile settings */
 @media screen and (max-width: 1080px) {
 	body {
