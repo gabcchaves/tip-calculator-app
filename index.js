@@ -34,6 +34,8 @@ function loadEvents() {
 	let bill = (billInput.value != "" ? parseFloat(billInput.value) : 0.0);
 	let numPeople = (numPeopleInput.value != "" ? parseInt(numPeopleInput.value) : 1);
 
+	percCustom.value = "";
+
 	for (let i = 0; i < percRadios.length; i++) {
 		// Set current percentage
 		if (percRadios[i].checked) currPerc = percRadios[i].value;
@@ -42,7 +44,6 @@ function loadEvents() {
 			if (percRadios[i].checked) {
 				currPerc = parseFloat(percRadios[i].value);
 				percCustom.value = "";
-				percCustom.disabled = true;
 			}
 
 			refreshResults(
@@ -52,6 +53,12 @@ function loadEvents() {
 		});
 	}
 
+	refreshResults(
+		calcTip(bill, currPerc, numPeople),
+		calcTotal(bill, currPerc, numPeople)
+	);
+
+	// Events
 	billInput.addEventListener("input", () => {
 		bill = (billInput.value != "" ? parseFloat(billInput.value) : 0.0);
 		numPeople = (numPeopleInput.value != "" ? parseInt(numPeopleInput.value) : 1);
@@ -83,6 +90,12 @@ function loadEvents() {
 			calcTip(bill, currPerc, numPeople),
 			calcTotal(bill, currPerc, numPeople)
 		);
+	});
+
+	percCustom.addEventListener("focus", () => {
+		for (let i = 0; i < percRadios.length; i++) {
+			percRadios[i].checked = false;
+		}
 	});
 }
 
