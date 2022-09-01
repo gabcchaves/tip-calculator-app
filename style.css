@@ -48,7 +48,7 @@ body {
 	height: 60%;
 	display: flex;
 	padding: 2.5%;
-	box-shadow: 0 10px 60px -20px var(--dark-grayish-cyan);
+	box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 5%);
 }
 
 #tip-card input, #reset-btn {
